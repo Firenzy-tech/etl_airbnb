@@ -40,10 +40,11 @@ class Transformacion:
         documentos de MongoDB) que impiden usar ``drop_duplicates`` directamente.
         """
         columnas = []
-        for col in df.select_dtypes(include="object").columns:
-            muestra = df[col].dropna()
-            if muestra.map(lambda v: isinstance(v, (list, dict, set))).any():
-                columnas.append(col)
+        for col in df.columns:
+            if pd.api.types.is_object_dtype(df[col]) or pd.api.types.is_string_dtype(df[col]):
+                muestra = df[col].dropna()
+                if muestra.map(lambda v: isinstance(v, (list, dict, set))).any():
+                    columnas.append(col)
         return columnas
 
     def limpiar_nulos_y_duplicados(

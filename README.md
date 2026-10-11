@@ -119,8 +119,22 @@ Cada ejecución genera un log en `logs/log_YYYYMMDD_HHMM.txt`.
 jupyter notebook notebooks/exploracion_airbnb.ipynb
 ```
 
+### Pruebas automatizadas (QA)
+
+Para ejecutar todas las pruebas automatizadas de calidad de datos con `pytest`:
+
+```bash
+pytest -v
+```
+
+O usando el ejecutable del entorno virtual:
+
+```bash
+python -m pytest -v
+```
+
 ## Tecnologías
 
 - Python, Pandas, PyMongo
 - SQLite (`sqlite3`), OpenPyXL
-- Matplotlib, Seaborn, Jupyter
+- Matplotlib, Seaborn, Jupyter, Pytest

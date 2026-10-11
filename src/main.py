@@ -41,6 +41,15 @@ DB_PATH = str(RAIZ_PROYECTO / "airbnb_data.db")
 EXCEL_LISTINGS = str(RAIZ_PROYECTO / "listings_transformado.xlsx")
 EXCEL_REVIEWS = str(RAIZ_PROYECTO / "reviews_transformado.xlsx")
 
+def saludar():
+    nombre = "Lord"
+    print(f"Hola, {nombre}")
+
+    return nombre
+
+breakpoint_test = True  # Coloca aquí el breakpoint
+saludar()
+
 def procesar_listings(extractor: Extraccion, transformador: Transformacion):
     """
     Extrae y transforma la colección Listings.
@@ -62,9 +71,7 @@ def procesar_listings(extractor: Extraccion, transformador: Transformacion):
 def procesar_reviews(extractor: Extraccion, transformador: Transformacion):
     """
     Extrae y transforma la colección Reviews.
-
     Orden: limpiar nulos/duplicados (date es crítica) -> procesar fechas.
-
     Returns:
         pd.DataFrame: Reviews transformado.
     """

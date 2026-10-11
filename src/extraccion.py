@@ -92,13 +92,9 @@ class Extraccion:
     def extraer_coleccion(self, nombre_coleccion: str, limite: Optional[int] = None) -> pd.DataFrame:
         """
         Lee una colección de MongoDB y la convierte en un DataFrame.
-
         El campo ``_id`` (ObjectId) se convierte a texto para que pueda
         almacenarse posteriormente en SQLite/Excel.
-
-        Args:
-            nombre_coleccion: Nombre de la colección (Listings, Reviews, Calendar).
-            limite: Número máximo de documentos a leer (útil para pruebas). ``None`` = todos.
+        Args: nombre_coleccion: Nombre de la colección (Listings, Reviews, Calendar).            limite: Número máximo de documentos a leer (útil para pruebas). ``None`` = todos.
 
         Returns:
             pd.DataFrame: Datos de la colección (vacío si no hay documentos).
