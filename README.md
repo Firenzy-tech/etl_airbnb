@@ -133,8 +133,18 @@ O usando el ejecutable del entorno virtual:
 python -m pytest -v
 ```
 
+### Generación del Informe Final en PDF
+
+Para compilar el informe técnico `docs/INFORME_FINAL.md` junto con las gráficas de `docs/img/` en un archivo PDF listo para entrega:
+
+```bash
+python src/generador_pdf.py
+```
+
+El resultado se generará en la raíz del proyecto como `Informe_Final_ETL.pdf`.
+
 ## Tecnologías
 
 - Python, Pandas, PyMongo
 - SQLite (`sqlite3`), OpenPyXL
-- Matplotlib, Seaborn, Jupyter, Pytest
+- Matplotlib, Seaborn, Jupyter, Pytest, ReportLab

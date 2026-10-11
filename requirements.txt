@@ -6,3 +6,4 @@ openpyxl
 jupyter
 
 pytest
+reportlab
