@@ -1,0 +1,45 @@
+# Entornos virtuales
+venv/
+.venv/
+env/
+ENV/
+
+# Byte-code y caché de Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Archivos de datos generados por el ETL
+*.db
+*.sqlite
+*.sqlite3
+*.xlsx
+*.csv
+
+# Logs generados automáticamente
+logs/
+*.log
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Configuraciones de IDE / Editor
+.vscode/
+.idea/
+*.swp
+*~
+
+# Variables de entorno
+.env
+
+*.csv
+data/
+airbnb_data.db
+*.db
+reviews_transformado.xlsx
+*.db
+airbnb_data.db
+*.db
+reviews_transformado.xlsx
